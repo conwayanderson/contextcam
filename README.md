@@ -6,6 +6,8 @@ A simple iOS starter project for integrating [Moondream](https://moondream.ai) A
 
 Captures images from your camera, sends them to Moondream AI for analysis, and includes a basic keyword detection to test having the app respond to certain detected contexts.
 
+![Context Cam Demo](context_cam_example.gif)
+
 ## Quick Start
 
 1. **Get a Moondream API key** at [moondream.ai](https://moondream.ai)
