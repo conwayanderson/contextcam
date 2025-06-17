@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		90773E442DDD79E4003E082E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90773E432DDD79E4003E082E /* ContentView.swift */; };
-		907CEA6E2B6B616C0070A09F /* KeywordActionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907CEA6D2B6B616C0070A09F /* KeywordActionManager.swift */; };
+		907CEA6E2B6B616C0070A09F /* ContextManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907CEA6D2B6B616C0070A09F /* ContextManager.swift */; };
 		9090F2F62B68A7AC00DE0D6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9090F2F52B68A7AC00DE0D6F /* AppDelegate.swift */; };
 		9090F2FC2B68A7AD00DE0D6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9090F2FB2B68A7AD00DE0D6F /* Assets.xcassets */; };
 		9090F2FF2B68A7AD00DE0D6F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9090F2FE2B68A7AD00DE0D6F /* Preview Assets.xcassets */; };
@@ -40,7 +40,7 @@
 
 /* Begin PBXFileReference section */
 		90773E432DDD79E4003E082E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		907CEA6D2B6B616C0070A09F /* KeywordActionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordActionManager.swift; sourceTree = "<group>"; };
+		907CEA6D2B6B616C0070A09F /* ContextManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextManager.swift; sourceTree = "<group>"; };
 		9090F2F22B68A7AC00DE0D6F /* context-camera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "context-camera.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9090F2F52B68A7AC00DE0D6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9090F2FB2B68A7AD00DE0D6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -109,7 +109,7 @@
 				9090F2F52B68A7AC00DE0D6F /* AppDelegate.swift */,
 				9090F3212B68A8FF00DE0D6F /* CameraCaptureView.swift */,
 				90773E432DDD79E4003E082E /* ContentView.swift */,
-				907CEA6D2B6B616C0070A09F /* KeywordActionManager.swift */,
+				907CEA6D2B6B616C0070A09F /* ContextManager.swift */,
 				9090F3262B69682500DE0D6F /* AIImageCaptureController.swift */,
 				Config123456789012345678 /* Config.swift */,
 				Service123456789012345678 /* MoondreamService.swift */,
@@ -279,7 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9090F3272B69682500DE0D6F /* AIImageCaptureController.swift in Sources */,
-				907CEA6E2B6B616C0070A09F /* KeywordActionManager.swift in Sources */,
+				907CEA6E2B6B616C0070A09F /* ContextManager.swift in Sources */,
 				90773E442DDD79E4003E082E /* ContentView.swift in Sources */,
 				9090F3222B68A8FF00DE0D6F /* CameraCaptureView.swift in Sources */,
 				9090F2F62B68A7AC00DE0D6F /* AppDelegate.swift in Sources */,

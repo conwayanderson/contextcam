@@ -10,7 +10,7 @@ import UIKit
 import Foundation
 
 struct ContentView: View {
-    @StateObject private var keywordActionManager = KeywordActionManager.shared
+    @StateObject private var contextManager = ContextManager.shared
     @State private var cameraController: CameraController?
     @State private var apiResponse = ""
     @State private var isAnalysisPending = false
@@ -38,22 +38,28 @@ struct ContentView: View {
         let base64String = imageData.base64EncodedString()
         calculateBase64SizeInBytes(base64String: base64String)
         
-        MoondreamService.shared.generateCaption(for: base64String) { result in
+        // Create data URL for Moondream
+        let dataURL = "data:image/jpeg;base64,\(base64String)"
+        
+        MoondreamService.shared.generateCaption(for: dataURL) { result in
             DispatchQueue.main.async {
                 switch result {
                 case .success(let caption):
                     self.apiResponse = caption
                     self.isAnalysisPending = false
                     
-                    // Process the response for keyword actions
-                    if let action = KeywordActionManager.shared.processKeywords(in: caption) {
-                        self.triggerActionUI(actionText: action.actionText)
+                    // Check for contexts using direct queries to Moondream
+                    ContextManager.shared.checkForContexts(imageBase64: dataURL) { action in
+                        DispatchQueue.main.async {
+                            if let action = action {
+                                self.triggerActionUI(actionText: action.actionText)
+                            }
+                        }
                     }
                     
                     // Continue capturing if continuous mode is enabled
                     if self.isContinuousCapture {
-                        // Small delay before next capture to avoid overwhelming the API
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                             self.captureImageForAnalysis()
                         }
                     }
